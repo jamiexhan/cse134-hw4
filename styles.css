@@ -1,0 +1,186 @@
+/* Jamie Han
+   Repository: https://github.com/jamiexhan/cse134-hw3 */
+
+:root {
+  --teal-green: #487A71;
+  --dark-green: #1f3c36;
+  --light-green: #eff9f4;
+  --font-main: 'Outfit', Arial, sans-serif;
+  --font-caption: 'IBM Plex Mono', monospace;
+}
+
+body{
+    font-family: var(--font-main);
+    color: var(--teal-green);
+    /* backup color in case I no longer want to use color above-> color: #2B5A4F; */
+    background-color: var(--light-green);
+    line-height: 1.5;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+img,
+iframe,
+video {
+  max-width: 100%;
+}
+
+iframe {
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+
+img,
+video {
+  height: auto;
+}
+
+header{ 
+  background-color: var(--teal-green);
+  color: white;
+  margin: 0 -1rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer {
+  background-color: rgb(216, 250, 241);
+  border-top: 2px solid var(--teal-green);
+  margin: 1rem -1rem 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  text-align: center;
+  padding: 0.5rem;
+  border-bottom: 2px solid var(--teal-green);
+}
+
+h3{
+  font-family: var(--font-caption);
+  font-size: 1.25rem;
+}
+
+p{
+  color: var(--dark-green);
+}
+
+main {
+  padding: 1rem;
+}
+
+project-card {
+  border: 2px solid var(--teal-green);
+  border-radius: 0.7rem;
+  background-color: white;
+  display: block;
+  padding: 0 2rem 2rem 2rem;
+  margin: 1rem 0;
+}
+
+nav ul {
+  display: flex; 
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: inline-block;
+  max-width: 100%;
+  padding: 0.5em 1em;
+  border: 2px solid var(--dark-green);
+  background-color: var(--light-green);
+  border-radius: 0.7rem;
+  text-decoration: none;
+  color: var(--dark-green);
+}
+
+a:hover {
+  background-color: var(--dark-green);
+  color: white;
+}
+
+a:focus,
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: 3px solid var(--dark-green);
+  outline-offset: 2px;
+}
+
+button {
+  padding: 0.5em 1em;
+  border: 2px solid var(--dark-green);
+  border-radius: 0.7rem;
+  background-color: var(--light-green);
+  color: var(--dark-green);
+  font-family: inherit;
+}
+
+button:hover {
+  background-color: var(--dark-green);
+  color: white;
+}
+
+/*To give more contrast in nav bar highlight vs background*/
+header a:focus {
+  outline-color: var(--light-green);
+}
+
+fieldset {
+  min-width: 0;
+}
+
+/* Attribute selector: target the text and email inputs by their type attribute;
+   textarea is grouped in so all three form fields look consistent(on the contact page) */
+input[type="text"],
+input[type="email"],
+textarea{
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 0.5em;
+  max-width: 24rem;
+  box-sizing: border-box;
+  border: 1px solid var(--dark-green);
+}
+
+/* Child combinator: targets only articles that are direct children of a section
+   (in gallery page) */
+section > article {
+  text-align: center;
+}
+
+/* Descendant combinator: targets p that lives anywhere inside a section
+   (in index & gallery page dialog box) */
+section p{
+  border-left: 2px solid var(--teal-green);
+  padding-left: 0.5rem;
+}
+
+@media (min-width: 48rem) {
+  main {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  nav ul {
+    flex-direction: column;
+  }
+  nav a {
+    display: block;
+    text-align: center;
+  }
+}
